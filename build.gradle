@@ -19,10 +19,9 @@ apply plugin: 'spring-boot'
 apply plugin: 'io.spring.dependency-management'
 
 ext {
-	// test fail
-	springDataVersion = 'Hopper-SR2'
-	// test successful
 	//springDataVersion = 'Gosling-SR4'
+	//springDataVersion = 'Hopper-SR2'
+	springDataVersion = 'Hopper-BUILD-SNAPSHOT'
 }
 
 dependencyManagement {
@@ -40,6 +39,7 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url "http://repo.spring.io/snapshot" }
 }
 
 
